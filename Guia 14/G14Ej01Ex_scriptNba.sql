@@ -50,5 +50,5 @@ SELECT equipo_local, equipo_visitante, ABS(puntos_local - puntos_visitante) AS '
  
   -- 15) Mostrar quien gana en cada partido (codigo, equipo_local, equipo_visitante, equipo_ganador), en caso de empate sera null.
 SELECT codigo, equipo_local, equipo_visitante, puntos_local, puntos_visitante, IF(puntos_local > puntos_visitante, equipo_local,
- IF(puntos_local < puntos_visitante, equipo_Visitante, IF(puntos_local = puntos_visitante, null, '???'))) AS 'Ganador'
+ IF(puntos_local < puntos_visitante, equipo_visitante, IF(puntos_local = puntos_visitante, null, '???'))) AS 'Ganador'
  FROM partidos;
